@@ -1,0 +1,558 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>GSoC 2026 - Derrick Richard | TorchVision for R</title>
+  <meta content="Google Summer of Code 2026 - Extending TorchVision support in R for computer vision tasks" name="description">
+  <meta content="GSoC, TorchVision, R, Computer Vision, mlverse" name="keywords">
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/logo.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+  <!-- ======= Desktop nav toggle button ======= -->
+  <button type="button" id="navbar-toggle" class="nav-toggle d-none d-xl-block"><i class="icofont-close"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+        <p> </p>
+        <h1 class="text-light"><a href="index.html">Derrick Richard</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/DerrickUnleashed" target="_blank" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://linkedin.com/in/derrick-s-richard" target="_blank" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
+          <a href="mailto:derrickrds@gmail.com" target="_blank" class="email"><i class="bx bx-envelope"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about"><i class="bx bx-user-circle"></i> <span>About</span></a></li>
+          <li><a href="#project"><i class="bx bx-data"></i> <span>Project</span></a></li>
+          <li><a href="#repos"><i class="bx bx-git-repo"></i> <span>Repositories</span></a></li>
+          <li><a href="#timeline"><i class="bx bx-timeline"></i> <span>PR Timeline</span></a></li>
+          <li><a href="#stats"><i class="bx bx-bar-chart-alt-2"></i> <span>Stats</span></a></li>
+          <li><a href="https://github.com/DerrickUnleashed" target="_blank"><i class="bx bx-link-external"></i> <span>GitHub</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <img src="assets/img/gsoc.png" alt="GSoC Logo" class="gsoc-logo mb-3">
+      <h1>Google Summer of Code 2026</h1>
+      <p>I'm <span class="typed" data-typed-items="Extending TorchVision in R,Building Item Transforms,Adding Object Detection Models,Contributing to mlverse,Open-Source Developer"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="content">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 about-me">
+
+            <p>
+              I am Derrick Richard, a Computer Science and Data Science student selected for <strong>Google Summer of Code 2026</strong> with the <strong>mlverse</strong> organization. My project focuses on extending <strong>TorchVision</strong> support in R for computer vision tasks.
+            </p>
+            <p>
+              The core objective is to bring full-featured computer vision capabilities to the R ecosystem by implementing item transforms for detection and segmentation pipelines, adding state-of-the-art object detection models like RF-DETR, and building utility functions for rotated bounding box operations.
+            </p>
+            <p>
+              Over the course of this program, I've contributed <strong>20+ pull requests</strong> across two repositories — <code>mlverse/torchvision</code> and <code>mlverse/torchvisionlib</code> — covering everything from image augmentation transforms to CUDA-level operations.
+            </p>
+            <p>
+              My mentors and the mlverse community have been incredible. This experience has deepened my understanding of computer vision internals, R package development, and collaborative open-source engineering.
+            </p>
+
+          </div>
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/gsoc.png" alt="GSoC 2026" class="img-fluid gsoc-hero-img" />
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Project Section ======= -->
+    <section id="project" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Project Overview</h2>
+          <p>Extending TorchVision in R for Computer Vision Tasks</p>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h5 class="mb-3"><strong>Objectives</strong></h5>
+            <ul class="project-list">
+              <li><i class="bx bx-check-circle"></i> Implement item transforms for detection & segmentation data augmentation pipelines</li>
+              <li><i class="bx bx-check-circle"></i> Add RF-DETR and LW-DETR object detection models</li>
+              <li><i class="bx bx-check-circle"></i> Build rotated bounding box utilities (IoU, coordinate transforms)</li>
+              <li><i class="bx bx-check-circle"></i> Add SAHI (Slicing Aided Hyper Inference) for small object detection</li>
+              <li><i class="bx bx-check-circle"></i> Implement CUDA-level operations in torchvisionlib</li>
+              <li><i class="bx bx-check-circle"></i> Improve reliability, documentation, and CI infrastructure</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <h5 class="mb-3"><strong>Technologies</strong></h5>
+            <div class="tech-tags">
+              <span class="tech-tag">R</span>
+              <span class="tech-tag">torch</span>
+              <span class="tech-tag">torchvision</span>
+              <span class="tech-tag">torchvisionlib</span>
+              <span class="tech-tag">C++</span>
+              <span class="tech-tag">CUDA</span>
+              <span class="tech-tag">Rcpp</span>
+              <span class="tech-tag">roxygen2</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">RF-DETR</span>
+              <span class="tech-tag">LW-DETR</span>
+              <span class="tech-tag">SAHI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Project Section -->
+
+    <!-- ======= Repos Section ======= -->
+    <section id="repos" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Repositories</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="repo-card">
+              <div class="repo-header">
+                <i class='bx bx-git-repo text-primary'></i>
+                <h4><a href="https://github.com/mlverse/torchvision" target="_blank">mlverse/torchvision</a></h4>
+              </div>
+              <p>Tensor-like toolkit for image classification, object detection, segmentation and more in R. Provides access to pre-trained models, datasets, and image/video transforms.</p>
+              <div class="repo-stats">
+                <span><i class="bx bx-git-pull-request"></i> 19 PRs contributed</span>
+                <span><i class="bx bx-star"></i> 77</span>
+                <span><i class="bx bx-git-fork"></i> 31</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="repo-card">
+              <div class="repo-header">
+                <i class='bx bx-git-repo text-primary'></i>
+                <h4><a href="https://github.com/mlverse/torchvisionlib" target="_blank">mlverse/torchvisionlib</a></h4>
+              </div>
+              <p>Low-level C++/CUDA operations for torchvision in R. Provides compiled ops for NMS, ROI align, deformable attention, and rotated box operations.</p>
+              <div class="repo-stats">
+                <span><i class="bx bx-git-pull-request"></i> 1 PR contributed</span>
+                <span><i class="bx bx-star"></i> 9</span>
+                <span><i class="bx bx-git-fork"></i> 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Repos Section -->
+
+    <!-- ======= PR Timeline Section ======= -->
+    <section id="timeline" class="resume section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Pull Request Timeline</h2>
+          <p>Contributions to mlverse/torchvision and mlverse/torchvisionlib (March 2026 - August 2026)</p>
+        </div>
+
+        <div class="timeline-container">
+
+          <!-- PR #302 - Mar 28 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Mar 28, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/302" target="_blank">#302 Fix typo and inconsistency in roxygen2 docs</a></h4>
+              <p>Cleaned up documentation typos and inconsistencies across roxygen2 generated docs for cleaner package documentation.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #303 - Mar 28 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Mar 28, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/303" target="_blank">#303 Add skeleton edge rendering to draw_keypoints()</a></h4>
+              <p>Enhanced the keypoint visualization function with skeleton edge rendering for better pose estimation visualization.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #311 - Apr 2 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Apr 2, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/311" target="_blank">#311 Polishing NEWS.md for release 0.9.0</a></h4>
+              <p>Refined the changelog and release notes in preparation for the CRAN 0.9.0 release.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #326 - Jun 7 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jun 7, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/326" target="_blank">#326 Upgrading Roxygen2 to version 8.0.0</a></h4>
+              <p>Upgraded the roxygen2 documentation generator to v8.0.0 for improved documentation generation and newer markdown support.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #329 - Jul 7 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 7, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/329" target="_blank">#329 Add SAHI (Slicing Aided Hyper Inference) Transform</a></h4>
+              <p>Implemented the SAHI transform for small object detection, enabling sliding-window inference with automatic stitching of results.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #333 - Jul 7 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 7, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/333" target="_blank">#333 Add Model RF-DETR</a></h4>
+              <p>Implemented the RF-DETR (Real-time Fused Detection Transformer) object detection model with pre-trained weight loading support.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #339 - Jul 7 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 7, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/339" target="_blank">#339 Bump actions/checkout from v4 to v5</a></h4>
+              <p>Upgraded GitHub Actions checkout action to v5 in the CI pipeline for improved performance and reliability.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #342 - Jul 25 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 25, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/342" target="_blank">#342 Add transform_to_rotated_box & box_xyxy_to_xyxyr</a></h4>
+              <p>Implemented rotated bounding box coordinate transforms and conversion utilities for rotated object detection workflows.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #366 - Jul 29 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 29, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/366" target="_blank">#366 Add item_transform_hflip</a></h4>
+              <p>Implemented horizontal flip item transform with proper bounding box and mask adjustments for detection/segmentation pipelines.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #369 - Jul 30 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Jul 30, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/369" target="_blank">#369 Add item_transform_vflip</a></h4>
+              <p>Implemented vertical flip item transform for detection and segmentation data augmentation with correct bounding box updates.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #370 - Aug 1 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 1, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/370" target="_blank">#370 Add item_transform_center_crop</a></h4>
+              <p>Implemented center crop item transform for detection and segmentation items with bounding box clipping support.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #371 - Aug 1 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 1, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/371" target="_blank">#371 Add item_transform_crop</a></h4>
+              <p>Implemented crop item transform for detection and segmentation items, enabling precise region-of-interest extraction.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #373 - Aug 1 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 1, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/373" target="_blank">#373 Add item_transform_pad</a></h4>
+              <p>Implemented pad item transform for detection and segmentation items with configurable padding modes and values.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #374 - Aug 1 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 1, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/374" target="_blank">#374 Improve reliability of lfw_dataset</a></h4>
+              <p>Fixed reliability issues in the Labeled Faces in the Wild dataset loader for more robust dataset downloading and caching.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #377 - Aug 1 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 1, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/377" target="_blank">#377 Add item_transform_perspective</a></h4>
+              <p>Implements perspective transform for detection and segmentation items with perspective distortion augmentation.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+          <!-- PR #36 - Aug 2 (torchvisionlib) -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 2, 2026</div>
+              <div class="timeline-repo highlight-repo">mlverse/torchvisionlib</div>
+              <h4><a href="https://github.com/mlverse/torchvisionlib/pull/36" target="_blank">#36 Add roi_align_rotated</a></h4>
+              <p>Implements rotated ROI Align operation in C++/CUDA for rotated object detection feature extraction in torchvisionlib.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+          <!-- PR #381 - Aug 10 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge merged"><i class="bx bx-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 10, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/381" target="_blank">#381 Add item_transform_random_horizontal_flip</a></h4>
+              <p>Implemented randomized horizontal flip transform for detection and segmentation items with probabilistic application.</p>
+              <span class="status-badge merged">Merged</span>
+            </div>
+          </div>
+
+          <!-- PR #385 - Aug 11 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 11, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/385" target="_blank">#385 Fix item_transform_rotate bounding boxes</a></h4>
+              <p>Fixes the rotate transform to maintain tight bounding boxes after rotation, preventing box expansion artifacts.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+          <!-- PR #387 - Aug 11 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 11, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/387" target="_blank">#387 Add item_transform_random_crop</a></h4>
+              <p>Implements random crop item transform for detection and segmentation with bounding box intersection clipping.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+          <!-- PR #388 - Aug 12 -->
+          <div class="timeline-item right" data-aos="fade-left">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 12, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/388" target="_blank">#388 Fix: delete downloaded archives after extraction</a></h4>
+              <p>Cleans up temporary archive files after dataset extraction to reduce disk usage during dataset downloads.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+          <!-- PR #389 - Aug 13 -->
+          <div class="timeline-item left" data-aos="fade-right">
+            <div class="timeline-badge open"><i class="bx bx-hourglass"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-date">Aug 13, 2026</div>
+              <div class="timeline-repo">mlverse/torchvision</div>
+              <h4><a href="https://github.com/mlverse/torchvision/pull/389" target="_blank">#389 Add item_transform_random_erasing</a></h4>
+              <p>Implements random erasing augmentation for detection and segmentation items, randomly masking image regions for regularization.</p>
+              <span class="status-badge open">Open</span>
+            </div>
+          </div>
+
+        </div><!-- end timeline-container -->
+
+      </div>
+    </section><!-- End Timeline Section -->
+
+    <!-- ======= Stats Section ======= -->
+    <section id="stats" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contribution Stats</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">20</div>
+              <div class="stat-label">Pull Requests</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">14</div>
+              <div class="stat-label">Merged</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">6</div>
+              <div class="stat-label">Open</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Repositories</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4" data-aos="fade-up">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">19</div>
+              <div class="stat-label">Item Transforms</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">1</div>
+              <div class="stat-label">Object Detection Model</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">1</div>
+              <div class="stat-label">CUDA Op</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-card">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Months Active</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Stats Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2026 <strong><span>Derrick Richard</span></strong> | GSoC 2026
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
